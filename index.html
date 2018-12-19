@@ -1,28 +1,462 @@
-<!DOCTYPE html>
-<html lang="en-us">
-
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Fangqing Yu Bio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
-</head>
-<body>
-    <h1>Personal Bio</h1>
-    <h2>Francis Yu</h2>
-    <img src="http://lorempixel.com/output/city-q-g-400-300-3.jpg">
-
-<section>
-    <p>About Me</p>
-    <ul>
-        <li><a href="https://www.google.com" target="_blank">Email</a></li>
-        <li><a href="https://www.google.com" target="_blank">Social Media</a></li>
-        <li><a href="https://www.google.com" target="_blank">Projects I've Done</a></li>
-    </ul>
-
-</section>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+    <style type="text/css">
+        *,
+        *::before,
+        *::after{
+            box-sizing: border-box;
+        }
+
+        *:focus{
+            outline: none;
+
+        }
+            
+        body{
+            padding: 0;
+            margin: 30;
+            background-image: url("img/keyborad.jpg");
+            background-image:-moz-linear-gradient(50%);
+            color: black;
+            font-family: "Oxygen", sans-serif;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        img{
+            width: 80%;
+        }
+        
+  
+
+        .home img{
+            width: 100%;
+            -webkit-filter: greyscale(100%) contrast(100%);
+            filter: contrast(100%);
+        }
+
+        .folio img{
+            filter: contrast(100%);
+        }
+
+        aside{
+            position: fixed;
+            background: #32353C;
+            top: 0px;
+            left:0px;
+            width: 250px;
+            height: 100%;
+            overflow: none;
+            z-index: 1;
+            text-align: center;
+            padding: 0;
+        }
+
+        aside img{
+            filter: contrast(50%), brightness(100%);
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+
+        .material-icons.md-36{
+            font-size: 36px;
+        }
+
+        aside a{
+            display: block;
+            padding: 15px 0;
+            color: white;
+            transition: all 0.35s;
+            text-transform: uppercase;
+            font-size: 0.75em;
+            letter-spacing: 2px;
+        }
+
+        aside p{
+            margin: 0;
+            padding: 0;
+        }
+
+        aside a:hover{
+            background: #7B8C9E;
+            
+        }
+
+        aside nav a:nth-child(2){
+            background: #7B8C9E;
+        }
+
+        aside nav a:nth-child(2):hover{
+            background: #7B8C9E;
+           
+        }
+        
+        main{       
+            background: white;
+        }
+
+        header{
+            text-align: center;
+            letter-spacing: 2px;
+            margin-left: 60px;
+        }
+
+        header h1{
+            font-weight: bold;
+            font-size: 4em;
+            letter-spacing: 4px;
+        }
+
+        header h5{
+            font-weight: 300;
+            font-size: 1em;
+            letter-spacing: 4;
+            color: #2E2E2E;
+        }
+
+        
+
+        .about,
+        .folio,
+        .contact{
+            margin-top: 200px;
+            margin-left: 325px;
+            margin-right: 50px;
+            margin-bottom: 10px;
+        }
+
+        
+        .about h2,
+        .folio h2,
+        .contact h2{
+            font-weight: 1000;
+            text-transform: uppercase;
+            color: black;
+            padding-bottom: 10px;
+            letter-spacing: 4px;
+        }
+        
+
+        .about h3,
+        .folio h3{
+            font-weight: 1000;
+            margin-top: 50px;
+        }
+
+        .about,
+        .folio p{
+            color: white; 
+            font-family: sans-serif; 
+            font-size: 20px;
+        }
+
+        .contact p{
+            font-family: sans-serif; 
+            font-size: 20px;
+        }
+        
+        .folio div{
+            margin-left:25px;
+        }
+
+        .about span{
+            font-weight: 600;
+            color: white;
+        }
+
+        
+        .container{
+            width: 75%;
+            background-color: #0B173B;
+            margin-left: 50px;
+        }
+
+        .skills{
+            text-align: right;
+            padding-right: 2px;
+            color: white;
+            font-weight: bold;
+            background-color: rgb(78, 24, 37);
+
+        }
+
+        .excel{
+            width: 95%;
+            margin-right: 200px;
+        }
+
+        .tableau{
+            width: 10%;
+        }
+
+        .sql{
+            width: 80%;
+        }
+        
+        .python{
+            width: 65%;
+        }
+
+        .html{
+            width: 20%;
+        }
+
+        .css{
+            width: 10%;
+        }
+
+        .js{
+            width: 5%;
+        }
+        
+        textarea{
+            margin-left: 45px;
+            width: 801px;
+            height: 400px;
+        }
+
+        .contact input{
+            font-family: sans-serif; 
+            font-size: 20px;
+        }
+    
+    </style>
+  
+</head>
+
+<body>
+    <aside>
+        <nav>
+            <img src="img/selfie2.jpg" alt = "">
+            <a href="#home"><i class="material-icons md-36">home</i>
+            <p>Home</p>
+            </a>
+            
+            <a href="#about"><i class="material-icons md-36">person</i>
+            <p>About</p>
+            </a>
+
+            <a href="#folio"><i class="material-icons md-36">image</i>
+            <p>Folio</p>
+            </a>
+
+            <a href="#contact"><i class="material-icons md-36">mail</i>
+            <p>Contact</p>
+            </a>
+        
+        </nav>
+    </aside>
+
+        <!--
+        <nav class="mobile-nav">
+            
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#folio">Folio</a>
+            <a href="#contact">Contact</a>
+        
+        </nav>
+        -->
+        <main>
+            <header class="home" id="home"><br><br>
+                <h1>I'm Francis Yu</h1>
+                <h5>
+                    <p>Data Analyst</p>
+                    <p>QC Engineer</p>
+                    <p>Aspiring Data Scientist</p>
+                </h5>
+               
+                <img src="img/keyborad.jpg" alt = "">
+              
+
+            </header>
+        
+        </main>
+            <section class="about" id= "about">
+                <h2>About me</h2>
+                <p>
+                    <span>Hello I'm Francis</span>
+                </p>
+                <p>
+                    I'm a data analyst, SQL progarmmer, number cruncher, chart maker, aspiring data scientist.
+                </p>
+                <p>
+                    I have experience in manufacturing process control data analysis with demonstratted proficiency
+                    in working with large data sets and statistical reporting tools. I utilize SQL, Python, VBA and 
+                    any other open-source tools for data acquisition, processing, manipulation, summarizing, reporting
+                    and metrics and KPI development.
+                </p>
+                <p>
+                    I'm fluent in Chinese. I enjoy stand-up comedy, space documentary, fitness and cuisine.
+                </p>
+
+                    <h3>My Skills</h3>
+                    <p>Excel/VBA</p>
+                    <div class="container" id="bars">
+                        <div class="skills excel">95%</div>
+                    </div>
+
+                    <p>Tableau</p>
+                    <div class="container">
+                        <div class="skills tableau">10%</div>
+                    </div>
+
+                <p>SQL</p>
+                <div class="container">
+                    <div class="skills sql">80%</div>
+                </div>
+
+                <p>Python</p>
+                <div class="container">
+                    <div class="skills python">65%</div>
+                </div>
+                
+                <p>Html 5</p>
+                <div class="container">
+                    <div class="skills html">20%</div>
+                </div>
+
+                <p>CSS 3</p>
+                <div class="container">
+                    <div class="skills CSS">10%</div>
+                </div>
+
+                <p>Javascript</p>
+                <div class="container">
+                    <div class="skills js">5%</div>
+             
+                </div>  
+            </section>
+
+
+            <section class="folio" id="folio">
+                <h2>Folio</h2>
+                <!--
+                <div class="row-halves">
+                    <div class="col">
+                        
+                        <img src="keyborad.jpg"  alt="">
+                        
+                        <h3>Business</h3>
+                        <p>
+                            Building business intelligence and provide in-depth analysis for a wide range of datasets and business.
+                        </p>
+                    </div>
+
+                    <div class="col">
+                        
+                        <img src="keyborad.jpg"  alt="">
+                        
+                        <h3>Robust</h3>
+                            <p>
+                                Robust, customizable tools for all
+                            </p>
+                        </div>
+
+                </div>
+            
+                
+                <div class="row-halves">
+                    <div class="col">
+                    
+                    <img src="keyborad.jpg"  alt="">
+                    
+                    <h3>UX Design</h3>
+                        <p>
+                            Thoughtful and intuitive user experience. All of my design will be guaranteed ti wor your clients.
+                        </p>
+                    </div>
+    
+                    <div class="col">
+                    
+                    <img src="keyborad.jpg"  alt="">
+                    
+                    <h3>Personal</h3>
+                        <p>
+                            I also design and build for personal projects. No idea is too samll and everyone deserves a voice on the web.
+                        </p>
+                    </div>
+                
+                </div> -->
+                <!-- Photo Grid -->
+                <div class="row"> 
+                    <div class="column">
+                        <a href="https://github.com/FangqingYu" alt="" target="_blank"><img src="img/file.jpg" style="width:25%"></a>
+                        <a href="https://github.com/FangqingYu" alt="" target="_blank"><img src="img/file.jpg" style="width:25%"></a>
+                        <a href="https://github.com/FangqingYu" alt="" target="_blank"><img src="img/file.jpg" style="width:25%"></a>
+               
+                </div>
+                    <div class="column">
+                        <a href="https://github.com/FangqingYu" alt="" target="_blank"><img src="img/file.jpg" style="width:25%"></a>
+                        <a href="https://github.com/FangqingYu" alt="" target="_blank"><img src="img/file.jpg" style="width:25%"></a>
+                        <a href="https://github.com/FangqingYu" alt="" target="_blank"><img src="img/file.jpg" style="width:25%"></a>>
+                </div>  
+                <div class="column">
+                        <a href="https://github.com/FangqingYu" alt="" target="_blank"><img src="img/file.jpg" style="width:25%"></a>
+                        <a href="https://github.com/FangqingYu" alt="" target="_blank"><img src="img/file.jpg" style="width:25%"></a>
+                        <a href="https://github.com/FangqingYu" alt="" target="_blank"><img src="img/file.jpg" style="width:25%"></a>>
+                </div>
+                </div>
+        
+    
+
+
+
+
+
+
+
+
+
+
+
+        </section> 
+
+        <section class="contact" id="contact">
+            <h2>Contact</h2>
+            <div>
+                <form action="">
+                    <p>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name">
+                
+                        <label for="email">Eamil</label>
+                        <input type="text" id="email" name="email">
+                    </p>
+                    
+                    <p>
+                    <label for="message">Message</label>
+                    </p>
+                    <p>
+                    <textarea name="message" id="message"></textarea>
+                    </p>
+                    <input type="submit" value="message">
+                    
+                </form>
+            </div>
+
+        </section>
+
+            <footer>
+                <section class="top-bar">
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-linkedin"></i></a>
+                    <a href=""><i class="fab fa-github"></i></a>
+                </section>
+
+                <section class="bottom-bar">
+                    <p>&copy 2018 | All rights reserved</p>
+                </section>
+            </footer>
 </body>
+
 </html>
