@@ -22,8 +22,8 @@
         body{
             padding: 0;
             margin: 30;
-            background-image: url("img/keyborad.jpg");
-            background-image:-moz-linear-gradient(50%);
+            background-image: url("img/desk.jpg");
+            background-blend-mode: lighten;
             color: black;
             font-family: "Oxygen", sans-serif;
         }
@@ -44,13 +44,10 @@
             filter: contrast(100%);
         }
 
-        .folio img{
-            filter: contrast(100%);
-        }
 
         aside{
             position: fixed;
-            background: #32353C;
+            background: #828A8D;
             top: 0px;
             left:0px;
             width: 250px;
@@ -81,22 +78,30 @@
             letter-spacing: 2px;
         }
 
+        .resume a{
+            display: block;
+            color: rgb(78, 24, 37);
+            transition: all 0.35s;
+            text-transform: uppercase;
+            font-size: 0.75em;
+        }
+
         aside p{
             margin: 0;
             padding: 0;
         }
 
         aside a:hover{
-            background: #7B8C9E;
+            background: #7C7972;
             
         }
 
         aside nav a:nth-child(2){
-            background: #7B8C9E;
+            background: #7C7972;
         }
 
         aside nav a:nth-child(2):hover{
-            background: #7B8C9E;
+            background: #7C7972;
            
         }
         
@@ -117,7 +122,7 @@
         }
 
         header h5{
-            font-weight: 300;
+            font-weight: 220;
             font-size: 1em;
             letter-spacing: 4;
             color: #2E2E2E;
@@ -131,23 +136,24 @@
             margin-right: 50px;
             margin-bottom: 10px;
         }
-
-        .folio{
-            margin-top: 100px;
+        
+        .resume{
+            margin-top: 320px;
             margin-left: 325px;
-            margin-right: 50px;
+            margin-right: 75px;
             margin-bottom: 10px;
         }
         .contact{
-            margin-top: 200px;
+            margin-top: 300px;
             margin-left: 325px;
-            margin-right: 50px;
+            margin-right: 75px;
             margin-bottom: 10px;
         }
 
         
         .about h2,
         .folio h2,
+        .resume h2,
         .contact h2{
             font-weight: 1000;
             text-transform: uppercase;
@@ -158,37 +164,54 @@
         
 
         .about h3,
-        .folio h3{
+        .folio h3,
+        .resume h3{
+            color: black;
             font-weight: 1000;
-            margin-top: 50px;
         }
 
-        .about,
-        .folio p{
-            color: white; 
+        .about p{
+            color: black; 
             font-family: sans-serif; 
             font-size: 20px;
         }
+
+        .resume p{
+            color: black;
+            font-family: sans-serif;
+            font-size: 18px;
+        }
+        
 
         .contact p{
             font-family: sans-serif; 
             font-size: 20px;
         }
         
-        .folio div{
-            margin-left:25px;
-        }
-
         .about span{
             font-weight: 600;
-            color: white;
+            color: black;
+        }
+
+        .resume span{
+            font-weight: 1000;
+            color: black;
+        }
+
+        .resume table{
+          text-align: left;
+          width: 15%;
+        }
+       
+        .resume ul{ 
+            font-family: sans-serif; 
+            font-size: 20px;
         }
 
         
         .container{
-            width: 75%;
-            background-color: #0B173B;
-            margin-left: 50px;
+            width: 45%;
+            background-color: #828A8D;
         }
 
         .skills{
@@ -239,6 +262,72 @@
             font-family: sans-serif; 
             font-size: 20px;
         }
+
+
+        /*folio Photo Grid*/
+        .folio{
+            box-sizing: border-box;
+            padding: 20px;
+            font-family: Arial;
+            margin-top: 100px;
+            margin-left: 325px;
+            margin-right: 75px;
+        }
+        
+        .row {
+            margin: 8px -16px;
+        }
+
+        /* Add padding BETWEEN each column (if you want) */
+        .row,
+        .row > .column {
+            padding: 20px;
+        }
+
+        /* Create four equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 25%;
+        }
+
+        /* Clear floats after rows */ 
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Content */
+        .content {
+            background-color: white;
+            padding: 10px;
+        }
+        .content img{
+            max-width: 100%;
+           
+        }
+        
+        .content h3{
+          text-align: center;
+        }
+
+        .content p{
+          text-align: center;
+        }
+
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 900px) {
+          .column {
+              width: 50%;
+          }
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+          .column {
+              width: 50%;
+          }
+        }
     
     </style>
   
@@ -258,6 +347,10 @@
 
             <a href="#folio"><i class="material-icons md-36">image</i>
             <p>Folio</p>
+            </a>
+            
+            <a href="#resume"><i class="material-icons md-36">work</i>
+            <p>Resume</p>
             </a>
 
             <a href="#contact"><i class="material-icons md-36">mail</i>
@@ -286,147 +379,265 @@
                     <p>Aspiring Data Scientist</p>
                 </h5>
                
-                <img src="img/keyborad.jpg" alt = "">
+                <img src="img/keyborad.jpg" style="height:70%" alt = "">
               
 
             </header>
         
         </main>
-            <section class="about" id= "about">
-                <h2>About me</h2>
-                <p>
-                    <span>Hello I'm Francis</span>
-                </p>
-                <p>
-                    I'm a data analyst, SQL progarmmer, number cruncher, chart maker, aspiring data scientist.
-                </p>
-                <p>
-                    I have experience in manufacturing process control data analysis with demonstratted proficiency
-                    in working with large data sets and statistical reporting tools. I utilize SQL, Python, VBA and 
-                    any other open-source tools for data acquisition, processing, manipulation, summarizing, reporting
-                    and metrics and KPI development.
-                </p>
-                <p>
-                    I'm fluent in Chinese. I enjoy stand-up comedy, space documentary, fitness and cuisine.
-                </p>
-
-                    <h3>My Skills</h3>
-                    <p>Excel/VBA</p>
-                    <div class="container" id="bars">
-                        <div class="skills excel">95%</div>
-                    </div>
-
-                    <p>Tableau</p>
-                    <div class="container">
-                        <div class="skills tableau">10%</div>
-                    </div>
-
-                <p>SQL</p>
-                <div class="container">
-                    <div class="skills sql">80%</div>
-                </div>
-
-                <p>Python</p>
-                <div class="container">
-                    <div class="skills python">65%</div>
-                </div>
-                
-                <p>Html 5</p>
-                <div class="container">
-                    <div class="skills html">20%</div>
-                </div>
-
-                <p>CSS 3</p>
-                <div class="container">
-                    <div class="skills CSS">10%</div>
-                </div>
-
-                <p>Javascript</p>
-                <div class="container">
-                    <div class="skills js">5%</div>
-             
-                </div>  
-            </section>
-
-
-            <section class="folio" id="folio">
-                <h2>Folio</h2>
-                <!--
-                <div class="row-halves">
-                    <div class="col">
-                        
-                        <img src="keyborad.jpg"  alt="">
-                        
-                        <h3>Business</h3>
-                        <p>
-                            Building business intelligence and provide in-depth analysis for a wide range of datasets and business.
-                        </p>
-                    </div>
-
-                    <div class="col">
-                        
-                        <img src="keyborad.jpg"  alt="">
-                        
-                        <h3>Robust</h3>
-                            <p>
-                                Robust, customizable tools for all
-                            </p>
-                        </div>
-
-                </div>
             
+        <section class="about" id= "about">
+            <h2>About me</h2>
+            <p>
+                <span>Hello I'm Francis</span>
+            </p>
+            <p>
+                I'm a data analyst, SQL progarmmer, number cruncher, chart maker, aspiring data scientist and
+                a life-long learner. I'm currently studying in data science certification program at UCSD in 
+                pursue of a career in data science.
+            </p>
+            <p>
+                I have experience in manufacturing process control data analysis with demonstratted proficiency
+                in working with large data sets and statistical reporting tools. I utilize SQL, Python, VBA and 
+                any other open-source tools for data acquisition, processing, manipulation, summarizing, reporting
+                and metrics and KPI development.
+            </p>
+            <p>
+                I'm fluent in Chinese. I enjoy stand-up comedy, space documentary, fitness and cuisine.
+            </p>
+
+            <h3>My Skills</h3>
+            <p>Excel/VBA</p>
+            <div class="container" id="bars">
+                <div class="skills excel">95%</div>
+            </div>
+
+            <p>Tableau</p>
+            <div class="container">
+                <div class="skills tableau">10%</div>
+            </div>
+
+            <p>SQL</p>
+            <div class="container">
+              <div class="skills sql">80%</div>
+            </div>
+
+            <p>Python</p>
+            <div class="container">
+              <div class="skills python">65%</div>
+            </div>
                 
-                <div class="row-halves">
-                    <div class="col">
-                    
-                    <img src="keyborad.jpg"  alt="">
-                    
-                    <h3>UX Design</h3>
-                        <p>
-                            Thoughtful and intuitive user experience. All of my design will be guaranteed ti wor your clients.
-                        </p>
-                    </div>
-    
-                    <div class="col">
-                    
-                    <img src="keyborad.jpg"  alt="">
-                    
-                    <h3>Personal</h3>
-                        <p>
-                            I also design and build for personal projects. No idea is too samll and everyone deserves a voice on the web.
-                        </p>
-                    </div>
-                
-                </div> -->
-                <!-- Photo Grid -->
-                <div class="row"> 
-                    <div class="column">
-                        <a href="https://github.com/FangqingYu" alt="" target="_blank"><img src="img/file.jpg" style="width:25%"></a>
-                        <a href="https://github.com/FangqingYu" alt="" target="_blank"><img src="img/file.jpg" style="width:25%"></a>
-                        <a href="https://github.com/FangqingYu" alt="" target="_blank"><img src="img/file.jpg" style="width:25%"></a>
-               
-                </div>
-                    <div class="column">
-                        <a href="https://github.com/FangqingYu" alt="" target="_blank"><img src="img/file.jpg" style="width:25%"></a>
-                        <a href="https://github.com/FangqingYu" alt="" target="_blank"><img src="img/file.jpg" style="width:25%"></a>
-                        <a href="https://github.com/FangqingYu" alt="" target="_blank"><img src="img/file.jpg" style="width:25%"></a>>
-              
-                </div>
+            <p>Html 5</p>
+            <div class="container">
+              <div class="skills html">20%</div>
+            </div>
+
+            <p>CSS 3</p>
+            <div class="container">
+              <div class="skills CSS">10%</div>
+            </div>
+
+            <p>Javascript</p>
+            <div class="container">
+              <div class="skills js">5%</div>
+            </div>  
         
-    
+        </section>
 
 
-
-
-
-
-
-
-
-
-
+        <section class="folio" id="folio">
+           
+          <h2>Folio</h2>
+           
+          <!-- Portfolio Gallery Grid -->
+          <div class="row">
+            <div class="column">
+              <div class="content">
+                <a href="https://github.com/FangqingYu" target="_blank"> 
+                  <img src="img/file.jpg" alt="Nature">
+                  <h3>My Work</h3>
+                </a>
+                <p>Lorem ipsum..</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="content">
+                <a href="https://github.com/FangqingYu" target="_blank"> 
+                  <img src="img/file.jpg" alt="Nature">
+                  <h3>My Work</h3>
+                </a>
+                <p>Lorem ipsum..</p>
+              </div>
+            </div>
+          <div class="column">
+            <div class="content">
+              <a href="https://github.com/FangqingYu" target="_blank"> 
+                <img src="img/file.jpg" alt="Nature">
+                <h3>My Work</h3>
+              </a>
+                <p>Lorem ipsum..</p>
+              
+            </div>
+          </div>
+          <div class="column">
+            <div class="content">
+              <a href="https://github.com/FangqingYu" target="_blank"> 
+                <img src="img/file.jpg" alt="Nature">
+                <h3>My Work</h3>
+              </a>
+                <p>Lorem ipsum..</p>
+            </div>
+          </div>
+          <div class="column">
+              <div class="content">
+                <a href="https://github.com/FangqingYu" target="_blank"> 
+                  <img src="img/file.jpg" alt="Nature">
+                  <h3>My Work</h3>
+                </a>
+                  <p>Lorem ipsum..</p>
+              </div>
+            </div>
+            <div class="column">
+                <div class="content">
+                  <a href="https://github.com/FangqingYu" target="_blank"> 
+                    <img src="img/file.jpg" alt="Nature">
+                    <h3>My Work</h3>
+                  </a>
+                    <p>Lorem ipsum..</p>
+                </div>
+              </div>
+        </div>
+        <!--
+        <div class="content">
+          <img src="img/file.jpg" alt="Bear" style="width:100%">
+          <h3>Some Other Work</h3>
+          <p>Lorem ipsum..</p>
+        </div>
+        -->
+       <!-- END MAIN -->
+       </div>
+               
+      
         </section> 
 
+        <section class="resume" id="resume">
+            <h2>Resume</h2>
+            
+            <!--Download link for resume-->
+            <table>
+              <tr>
+                  <td>
+                    <a href="francis_yu_resume.pdf" download="francis_yu_resume_pdf">
+                      <i class="material-icons md-36">description</i>
+                    </a>
+                  </td>
+                  <td>
+                      <a href="francis_yu_resume.docx" download="francis_yu_resume_docx">
+                        <i class="material-icons md-36">description</i>
+                      </a>
+                    </td>
+              </tr>
+              <tr>
+                <td>PDF</td>
+                <td>Word</td>
+              </tr>
+            </table>
+            
+            
+            <div>
+              <h3>Genalyte, Inc., San Diego, CA</h3>
+              <span>
+                QC Data Analyst
+              </span>
+              <p>2016 - Present</p>
+              <p>Perform a variety of activities including data acquisition and processing to support 
+                various departments in analyzing and interpreting results for experiments, execution of 
+                protocols and other projects.
+              </p>
+              <ul>
+                <li>
+                  Design and implement report templates for Standard Operating Procedures (SOPs)
+                </li>
+                <li>
+                  Collaborate with Operations, Assay Development, Engineering and Manufacturing departments 
+                  to provide data reporting support
+                </li>
+                <li>
+                  Acquire (retrieve) data from various systems, formats and work within existing data environment 
+                  to deliver reporting solution
+                </li>
+                <li>
+                  Maintain periodic reports including production metrics, QC inspection and instrument validation reports
+                </li>
+                <li>
+                  Validate, interpret and visualize raw experiment data using statistical techniques
+                </li>
+                  Develop macros and scripts in Excel VBA, Python to process, manipulate data, create visualizations 
+                  and deliver results in client-requested formats or populate matrices (databases, spreadsheets) suitable for tasks
+                <li>
+                  Attend meetings to keep informed of development and manufacturing priorities and activities.
+                </li>
+                <li>
+                  Maintain and update relevant SOPs for data review and reporting, as needed
+                </li>
+              </ul>
+            </div>
+            
+            <br>
+            <div>
+                <h3>Genalyte, Inc., San Diego, CA</h3>
+                <span>
+                  Market Analyst Temp
+                </span>
+                <p>2016</p>
+                <p>Design and implements database of competitors</p>
+                <ul>
+                  <li>
+                    Compiled lists of competitions and conduct competitive analysis based on company size, product pipelines,
+                    press release and patents
+                  </li>
+                  <li>
+                    Designed and populated a comprehensive database of competitors information
+                  </li>
+                </ul>
+              </div>
+
+            <br>
+            <div>
+                <h3>Q2 Trading, LLC, Albany, NY</h3>
+                <span>
+                  Intern / Market Research Assistant
+                </span>
+                <p>2012-2015</p>
+                <p>Expanding company's existing customer base by marketing to potential customers</p>
+                <ul>
+                  <li>
+                    Researched and reported on market conditions in company’s strategic market
+                  </li>
+                  <li>
+                    Collected, organized and interpreted data using software tools, generating reports 
+                    on prospects and performance
+                  </li>
+                  <li>
+                    Assisted sales and management with day-to-day tasks
+                  </li>
+                  <li>
+                    Compiled, implemented and validated a databank of potential clients in the region
+                  </li>
+                  <li>
+                    Developed posters, guides and classroom materials to help employees learn basic 
+                    Chinese language to more effectively penetrate potential markets
+                  </li>
+                  <li>
+                    Helped initiate, design and organize a regional trade show targeting local retail businesses
+                  </li>
+                </ul>
+              </div>
+        
+          
+
+        </section>
+        
         <section class="contact" id="contact">
             <h2>Contact</h2>
             <div>
@@ -452,7 +663,7 @@
 
         </section>
 
-            <footer>
+        <footer>
                 <section class="top-bar">
                     <a href=""><i class="fab fa-facebook-f"></i></a>
                     <a href=""><i class="fab fa-linkedin"></i></a>
@@ -462,7 +673,7 @@
                 <section class="bottom-bar">
                     <p>&copy 2018 | All rights reserved</p>
                 </section>
-            </footer>
+        </footer>
 </body>
 
 </html>
