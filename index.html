@@ -21,7 +21,9 @@
             
         body{
             padding: 0;
-            margin: 30;
+            /*margin: 30;*/
+            margin: 0;
+            height: 100%;
             background-image: url("img/desk.jpg");
             background-blend-mode: lighten;
             color: black;
@@ -33,7 +35,12 @@
         }
 
         img{
-            width: 80%;
+            /*width: 80%;*/
+            padding: 0;
+            display: block;
+            margin: 0 auto;
+            max-height: 100%;
+            max-width: 100%;
         }
         
   
@@ -310,10 +317,12 @@
         
         .content h3{
           text-align: center;
+          font-size: 1.5vw;
         }
 
         .content p{
           text-align: left;
+          font-size: 1vw;
         }
 
         /* Responsive layout - makes a two column-layout instead of four columns */
@@ -337,7 +346,7 @@
 <body>
     <aside>
         <nav>
-            <img src="img/selfie2.jpg" alt = "">
+            <img src="img/linkedin profile pic.jpg" alt = "">
             <a href="#home"><i class="material-icons md-36">home</i>
             <p>Home</p>
             </a>
@@ -455,10 +464,10 @@
             <div class="column">
               <div class="content">
                 <a href="https://github.com/FangqingYu/Weather_Py" target="_blank"> 
-                  <img src="icon/scatter.png" alt="scatter">
+                  <img src="icon/trend.png" alt="scatter">
                   <h3>Global Climate  Analysis</h3>
                 </a>
-                <p>Visualizing the weather of 500+ cities across the world with varying distance from the equator</p>
+                <p>Visualizing the weather of 500+ cities around the globe with varying distance from the equator</p>
               </div>
             </div>
             <div class="column">
@@ -473,17 +482,17 @@
           <div class="column">
             <div class="content">
               <a href="https://github.com/paulinatharail/Project_1_Fastest_Growing_Cities" target="_blank"> 
-                <img src="icon/scatter.png" alt="scatter">
+                <img src="icon/trend.png" alt="scatter">
                 <h3>Population Growth Analysis</h3>
               </a>
-                <p>Analyzing 168 fastest growting U.S. Cities and factors with population greater than two millions</p>
+                <p>Analyzing 168 fastest growting U.S. Cities and factors with two-million plus population</p>
               
             </div>
           </div>
           <div class="column">
             <div class="content">
               <a href="https://github.com/FangqingYu" target="_blank"> 
-                <img src="icon/group_bar.png" alt="group_bar">
+                <img src="icon/trend.png" alt="group_bar">
                 <h3>Study of Drug Performance</h3>
               </a>
                 <p>Study and comparison of the effectiveness of different cancer drugs in a mocked drug trial</p>
@@ -492,30 +501,21 @@
           <div class="column">
               <div class="content">
                 <a href="https://github.com/FangqingYu/Pyber" target="_blank"> 
-                  <img src="icon/pie.png" alt="pie">
+                  <img src="icon/trend.png" alt="pie">
                   <h3>Study on Ride-sharing Services</h3>
                 </a>
-                  <p>Study on users' behavior towards a mocked ride-sharing service based on Uber or Lyft</p>
+                  <p>Study on users' behavior towards a mocked ride-sharing service (like Uber)</p>
               </div>
             </div>
             <div class="column">
                 <div class="content">
                   <a href="https://github.com/FangqingYu?tab=repositories" target="_blank"> 
-                    <img src="icon/pie_bar.png" alt="pie_bar">
+                    <img src="icon/trend.png" alt="pie_bar">
                     <h3>Some Other Works</h3>
                   </a>
                     <p>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      
+                    </p>
                 </div>
               </div>
         </div>
@@ -653,7 +653,7 @@
         <section class="contact" id="contact">
             <h2>Contact</h2>
             <div>
-                <form action="">
+                <form action="mailto:fangqingyu2010@gmail.com" method="post" enctype="text/plain">
                     <p>
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name">
@@ -668,8 +668,8 @@
                     <p>
                     <textarea name="message" id="message"></textarea>
                     </p>
-                    <input type="submit" value="message">
-                    
+                    <input type="submit" value="Send">
+                    <input type="reset" value="Reset"> 
                 </form>
             </div>
 
