@@ -112,6 +112,7 @@
            
         }
         
+        
         main{       
             background: white;
         }
@@ -210,11 +211,16 @@
           width: 15%;
         }
        
-        .resume ul{ 
+        .folio ul{ 
             font-family: sans-serif; 
             font-size: 20px;
         }
 
+        .resume ul{ 
+            font-family: sans-serif; 
+            font-size: 20px;
+        }
+        
         
         .container{
             width: 60%;
@@ -347,6 +353,7 @@
     <aside>
         <nav>
             <img src="img/linkedin profile pic.jpg" alt = "">
+            
             <a href="#home"><i class="material-icons md-36">home</i>
             <p>Home</p>
             </a>
@@ -356,7 +363,7 @@
             </a>
 
             <a href="#folio"><i class="material-icons md-36">image</i>
-            <p>Folio</p>
+            <p>Projects</p>
             </a>
             
             <a href="#resume"><i class="material-icons md-36">work</i>
@@ -366,11 +373,11 @@
             <a href="#contact"><i class="material-icons md-36">mail</i>
             <p>Contact</p>
             </a>
-        
         </nav>
     </aside>
+    
 
-        
+        <!--
         <nav class="mobile-nav">
             
             <a href="#home">Home</a>
@@ -379,7 +386,7 @@
             <a href="#resume">Resume</a>
             <a href="#contact">Contact</a>
         </nav>
-      
+        -->
         <main>
             <header class="home" id="home"><br><br>
                 <h1>I'm Francis Yu</h1>
@@ -402,13 +409,13 @@
                 <span>Hello I'm Francis</span>
             </p>
             <p>
-                I'm a data analyst, SQL progarmmer, number cruncher, chart maker, aspiring data scientist and
+                I'm a data analyst, Python progarmmer, number cruncher, chart maker, aspiring data scientist and
                 a life-long learner. I'm currently studying in data science certification program at UCSD in 
                 pursue of a career in data science.
             </p>
             <p>
                 I have experience in manufacturing process control data analysis with demonstratted proficiency
-                in working with large data sets and statistical reporting tools. I utilize SQL, Python, VBA and 
+                in working with large data sets and statistical reporting tools. I utilize SQL, Python, HTML&CSS, Javascript and 
                 any other open-source tools for data acquisition, processing, manipulation, summarizing, reporting
                 and metrics and KPI development.
             </p>
@@ -417,6 +424,10 @@
             </p>
 
             <h3>My Skills</h3>
+            <p>
+
+            </p>
+            
             <p>Excel/VBA</p>
             <div class="container" id="bars">
                 <div class="skills excel">95%</div>
@@ -456,83 +467,71 @@
 
 
         <section class="folio" id="folio">
-           
-          <h2>Folio</h2>
-           
-          <!-- Portfolio Gallery Grid -->
-          <div class="row">
-            <div class="column">
-              <div class="content">
-                <a href="https://github.com/FangqingYu/Weather_Py" target="_blank"> 
-                  <img src="icon/trend.png" alt="scatter">
-                  <h3>Global Climate  Analysis</h3>
-                </a>
-                <p>Visualizing the weather of 500+ cities around the globe with varying distance from the equator</p>
-              </div>
-            </div>
-            <div class="column">
-              <div class="content">
-                <a href="https://github.com/FangqingYu/Climate_Analysis" target="_blank"> 
-                  <img src="icon/trend.png" alt="trend">
-                  <h3>Local Weather Analysis</h3>
-                </a>
-                <p>Climate analysis on Honolulu, Hawaii using Python, SQLAlchemy and SQLAlchemy ORM</p>
-              </div>
-            </div>
-          <div class="column">
-            <div class="content">
-              <a href="https://github.com/paulinatharail/Project_1_Fastest_Growing_Cities" target="_blank"> 
-                <img src="icon/trend.png" alt="scatter">
-                <h3>Population Growth Analysis</h3>
-              </a>
-                <p>Analyzing 168 fastest growting U.S. Cities and factors with two-million plus population</p>
-              
-            </div>
-          </div>
-          <div class="column">
-            <div class="content">
-              <a href="https://github.com/FangqingYu" target="_blank"> 
-                <img src="icon/trend.png" alt="group_bar">
-                <h3>Study of Drug Performance</h3>
-              </a>
-                <p>Study and comparison of the effectiveness of different cancer drugs in a mocked drug trial</p>
-            </div>
-          </div>
-          <div class="column">
-              <div class="content">
-                <a href="https://github.com/FangqingYu/Pyber" target="_blank"> 
-                  <img src="icon/trend.png" alt="pie">
-                  <h3>Study on Ride-sharing Services</h3>
-                </a>
-                  <p>Study on users' behavior towards a mocked ride-sharing service (like Uber)</p>
-              </div>
-            </div>
-            <div class="column">
-                <div class="content">
-                  <a href="https://github.com/FangqingYu?tab=repositories" target="_blank"> 
-                    <img src="icon/trend.png" alt="pie_bar">
-                    <h3>Some Other Works</h3>
-                  </a>
-                    <p>
-                      
-                    </p>
-                </div>
-              </div>
+          
+          <h2>Side Projects</h2>
+          <!--Project 1-->
+          <div>  
+         
+            <h3>Global Weather Analysis - Web Visualization</h3>
+            <ul>
+                <li>
+                    Link: 
+                    <a href="https://fangqingyu.github.io/Global_Weather_WebVisualization/" target="_blank">https://fangqingyu.github.io/Global_Weather_WebVisualization</a>
+                </li>
+                <li>
+                    The purpose of this project was to analyze how weather changes as you get closer to the equator based on study of 500+ randomly selected cities around the globe.
+                </li>
+            </ul>
+         </div>
+         <br> 
+    
+         <!--Project 2-->
+         <div>
+            <h3>Study of Job Trends for Data Science jobs in California - Web Scraping, ETL and Visualization</h3>
+            <ul>
+                <li>
+                    Link:
+                    <a href="https://chrng404.github.io/Data_Science_ETL_Project/templates/index.html" target="_blank">https://chrng404.github.io/Data_Science_ETL_Project</a>
+                </li>
+                <li>
+                    This analysis studies 1000+ job listings and answers where in California data science jobs are concentrated, how much money they pay, what skills and backgrounds 
+                    are sought after by employers, and what websites host the most listings. 
+                </li>
+            </ul>
         </div>
-        <!--
-        <div class="content">
-          <img src="img/file.jpg" alt="Bear" style="width:100%">
-          <h3>Some Other Work</h3>
-          <p>Lorem ipsum..</p>
-        </div>
-        -->
-       <!-- END MAIN -->
-       </div>
-               
-      
-        </section> 
 
-        <section class="resume" id="resume">
+        <br> 
+
+        <!--Project 3-->
+        <div>
+            <h3>Study of Population Growth in Big Cities - API and Visualizations</h3>
+            <ul>
+                <li>
+                    Link:
+                    <a href="" target="_blank">http://github.com</a>
+                </li>
+                <li>
+                    This analysis studies the 5-year population growth of 186 fastest growing U.S. cities with population greater than 200k according to U.S. Census data and
+                    the possible factors affecting it
+                </li>
+            </ul>
+        </div>
+
+        <br> 
+
+        <!--Other-->
+        <div>
+            <h3>Other Projects</h3>
+            <ul>
+                <li>Please check out my Github page</li>
+                <li> <a href="https://github.com/FangqingYu" target="_blank">https://github.com/FangqingYu</a></li>
+            </ul>
+        </div>
+          
+    </section> 
+
+       
+    <section class="resume" id="resume">
             <h2>Resume</h2>
             
             <!--Download link for resume-->
@@ -568,29 +567,30 @@
               </p>
               <ul>
                 <li>
-                  Design and implement report templates for Standard Operating Procedures (SOPs)
+                    Design and implement report templates for Standard Operating Procedures (SOPs)
                 </li>
                 <li>
-                  Collaborate with Operations, Assay Development, Engineering and Manufacturing departments 
-                  to provide data reporting support
+                    Designed and put in place the company’s SOPs for QC Lot Verification and Instrument Validation analysis procedures
                 </li>
                 <li>
-                  Acquire (retrieve) data from various systems, formats and work within existing data environment 
-                  to deliver reporting solution
+                    Automated the reporting process for periodic reports including production metrics, QC inspection and instrument validation reports
                 </li>
                 <li>
-                  Maintain periodic reports including production metrics, QC inspection and instrument validation reports
+                    Collaborate with Operations, Assay Development, Engineering and Manufacturing departments to provide data reporting support
                 </li>
                 <li>
-                  Validate, interpret and visualize raw experiment data using statistical techniques
+                    Acquire (retrieve) data from existing data environment to deliver reporting solution
                 </li>
-                  Develop macros and scripts in Excel VBA, Python to process, manipulate data, create visualizations 
-                  and deliver results in client-requested formats or populate matrices (databases, spreadsheets) suitable for tasks
+                    Validate, interpret and visualize raw experiment data using statistical techniques
                 <li>
-                  Attend meetings to keep informed of development and manufacturing priorities and activities.
+                    Develop macros and scripts to process, manipulate data, create visualizations and deliver results in client-requested formats
+                    or populate matrices (databases, spreadsheets) suitable for tasks.
                 </li>
                 <li>
-                  Maintain and update relevant SOPs for data review and reporting, as needed
+                    Attend meetings to keep informed of development and manufacturing priorities and activities.
+                </li>
+                <li>
+                    Maintain and update relevant SOPs for data review and reporting, as needed.
                 </li>
               </ul>
             </div>
